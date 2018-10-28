@@ -1,0 +1,33 @@
+{
+  "name": "mocha_project",
+  "version": "1.0.0",
+  "description": "javascript test tutorial",
+  "main": "index.js",
+  "repository": "",
+  "author": "kate",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --require babel-register $(find ./ -name '*./test/**/*.test.js') --recursive",
+    "fake:start": "cd src && json-server --watch db.json",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "json-server": "^0.9.6",
+    "mocha": "^3.2.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "global": "^4.3.2",
+    "method-override": "^3.0.0"
+  }
+}
